@@ -95,21 +95,21 @@ async def continue_conversation(message: types.Message, state: FSMContext):
         return
 
     MESSAGE_HISTORY.add_message(Role.USER, user_answer)
-    gpt_response = get_chatgpt_response(MESSAGE_HISTORY)
+    gpt_response = await get_chatgpt_response(MESSAGE_HISTORY)
     MESSAGE_HISTORY.add_message(Role.ASSISTANT, gpt_response)
 
     await Form.continue_chat.set()
     await message.answer(gpt_response, parse_mode=types.ParseMode.MARKDOWN)
 
 
-def get_chatgpt_response(
+async def get_chatgpt_response(
     message_history: MessageHistory, history_length=BOT_HISTORY_LENGTH
 ) -> str:
     """
     Main function that communicates with the ChatGPT API
     """
     logger.info("Query GhatGPT API")
-    response = openai.ChatCompletion.create(
+    response = await openai.ChatCompletion.acreate(
         model=MODEL_NAME,
         messages=message_history.get_history(history_length=history_length),
     )
