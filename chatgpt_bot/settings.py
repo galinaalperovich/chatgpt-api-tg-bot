@@ -4,7 +4,7 @@ import os
 BOT_HISTORY_LENGTH = os.getenv("BOT_HISTORY_LENGTH", 20)
 
 # Log configuration
-logger = logging.getLogger("ai_summary_bot")
+logger = logging.getLogger("gpt_chat")
 logger.setLevel(os.getenv("LOG_LEVEL", "INFO"))
 
 # Telegram bot configuration
