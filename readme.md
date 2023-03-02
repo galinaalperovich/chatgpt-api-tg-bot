@@ -1,4 +1,6 @@
 # Telegram bot with ChatGPT official API
+Blog post about it: https://medium.com/@galperovich/put-chatgpt-right-into-your-messenger-build-a-telegram-bot-with-the-new-official-openai-api-84f7c005de7f 
+
 OpenAI [announced](https://openai.com/blog/introducing-chatgpt-and-whisper-apis) they are opening the official ChatGPT model API for all developers. 
 The model is named `gpt-3.5-turbo` and achieved a 90% cost reduction compared to the December'22 version. Truly cutting-edge AI development is now available to anyone, and the price is more than reasonable! 
 
