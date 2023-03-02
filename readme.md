@@ -2,16 +2,17 @@
 OpenAI [announced](https://openai.com/blog/introducing-chatgpt-and-whisper-apis) they are opening the official ChatGPT model API for all developers. 
 The model is named `gpt-3.5-turbo` and achieved a 90% cost reduction compared to the December'22 version. Truly cutting-edge AI development is now available to anyone, and the price is more than reasonable! 
 
-In the last post, we went step-by-step through building a Telegram bot with any HuggingFace model under the hood. Today, let's build a Telegram bot with the official ChatGPT API under the hood! Accessing the chat right from your messenger is much more convenient and better than going into OpenAI UI, logging in, etc. You can search by chat, forward to a friend, or even add to the group conversation.
+Let's build a Telegram bot with the official ChatGPT API under the hood. Accessing the chat right from your messenger is much more convenient and better than going into OpenAI UI, logging in, etc. You can search by chat, forward to a friend, or even add to the group conversation.
 
 We will use the openai and aiogram python packages. We will also learn how to use a Finite State Machine functionality in the bot to wait for the user's reply.
 
 ## Usage
 
 1. Create a Telegram bot with [BotFather](https://t.me/botfather)
-2. Run the bot locally or deploy with Docker
-3. Set the OpenAI token with /set_token
-4. Start the chat with /new_chat
+2. Get the OpenAI token https://platform.openai.com/account/api-keys 
+3. Run the bot locally or deploy with Docker
+4. Set the OpenAI token with /set_token
+5. Start the chat with /new_chat
 
 ## Tools under the hood
 
